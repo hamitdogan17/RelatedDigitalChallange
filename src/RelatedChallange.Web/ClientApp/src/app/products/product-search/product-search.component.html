@@ -1,0 +1,18 @@
+<div class="mt-4">
+  <h5>Search Product</h5>
+  <form [formGroup]="productForm" (submit)="searchProduct()" class="form-inline mb-4">
+
+    <label class="sr-only" for="Name">Name</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <input type="text" class="form-control" formControlName="name" placeholder="name">
+    </div>
+
+    <label class="sr-only" for="tags">Tags</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <tag-input formControlName="tags" [(ngModel)]='selectedItems' [modelAsStrings]="true" [displayBy]="'name'"></tag-input>
+    </div>
+
+    <button type="submit" class="btn btn-primary mb-2">Search Product</button>
+
+  </form>
+</div>

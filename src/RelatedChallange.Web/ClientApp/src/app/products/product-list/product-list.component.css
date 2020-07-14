@@ -1,0 +1,7 @@
+.ng2-tag-input__text-input ng-untouched ng-pristine ng-valid {
+    visibility: hidden;
+}
+
+.ng2-tag-input__text-input[_ngcontent-c8] {
+    visibility: hidden;
+}

@@ -1,0 +1,23 @@
+<div class="mt-4">
+  <h3>Edit Product</h3>
+  <form [formGroup]="productForm" (submit)="updateProduct()" class="form-inline mb-4">
+
+    <label class="sr-only" for="Name">Name</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <input type="text" class="form-control" formControlName="name" placeholder="name">
+    </div>
+
+    <label class="sr-only" for="UnitPrice">Unit Price</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <input type="number" class="form-control" formControlName="unitPrice" placeholder="Unit Price">
+    </div>
+    
+    <label class="sr-only" for="tags">Tags</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <tag-input formControlName="tags" [(ngModel)]='selectedItems' [displayBy]="'name'"></tag-input>
+    </div>
+
+    <button type="submit" class="btn btn-primary mb-2">Update Product</button>
+
+  </form>
+</div>
